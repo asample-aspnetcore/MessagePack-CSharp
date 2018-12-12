@@ -7,12 +7,12 @@ namespace MessagePack.Internal
 {
     // for string key property name write optimization.
 
-    public static class UnsafeMemory
+    internal static class UnsafeMemory
     {
         public static readonly bool Is32Bit = (IntPtr.Size == 4);
     }
 
-    public static partial class UnsafeMemory32
+    internal static partial class UnsafeMemory32
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static unsafe int WriteRaw1(ref byte[] dst, int dstOffset, byte[] src)
@@ -58,7 +58,7 @@ namespace MessagePack.Internal
         }
     }
 
-    public static partial class UnsafeMemory64
+    internal static partial class UnsafeMemory64
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static unsafe int WriteRaw1(ref byte[] dst, int dstOffset, byte[] src)

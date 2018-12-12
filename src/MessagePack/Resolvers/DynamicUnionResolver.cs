@@ -484,7 +484,7 @@ namespace MessagePack.Internal
 {
     // RuntimeTypeHandle can embed directly by OpCodes.Ldtoken
     // It does not implements IEquatable<T>(but GetHashCode and Equals is implemented) so needs this to avoid boxing.
-    public class RuntimeTypeHandleEqualityComparer : IEqualityComparer<RuntimeTypeHandle>
+    internal class RuntimeTypeHandleEqualityComparer : IEqualityComparer<RuntimeTypeHandle>
     {
         public static IEqualityComparer<RuntimeTypeHandle> Default = new RuntimeTypeHandleEqualityComparer();
 

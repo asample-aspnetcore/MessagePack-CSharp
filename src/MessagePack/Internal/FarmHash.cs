@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace MessagePack.Internal
 {
-    public static class FarmHash
+    internal static class FarmHash
     {
         // entry point of 32bit
 

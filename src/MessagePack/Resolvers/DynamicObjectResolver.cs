@@ -1725,7 +1725,7 @@ typeof(int), typeof(int) });
             }
         }
 
-        public class EmittableMember
+        internal class EmittableMember
         {
             public bool IsProperty { get { return PropertyInfo != null; } }
             public bool IsField { get { return FieldInfo != null; } }

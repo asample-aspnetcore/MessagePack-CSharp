@@ -10,7 +10,7 @@ namespace MessagePack.Internal
 {
     // Key = long, Value = int for UTF8String Dictionary
 
-    public class AutomataDictionary : IEnumerable<KeyValuePair<string, int>>
+    internal class AutomataDictionary : IEnumerable<KeyValuePair<string, int>>
     {
         readonly AutomataNode root;
 
@@ -456,9 +456,9 @@ namespace MessagePack.Internal
         }
     }
 
-    public static class AutomataKeyGen
+    internal static class AutomataKeyGen
     {
-        public delegate ulong PointerDelegate<T>(ref T p, ref int rest);
+        internal delegate ulong PointerDelegate<T>(ref T p, ref int rest);
 
 #if NETSTANDARD || NETFRAMEWORK
         public static readonly MethodInfo GetKeyMethod = typeof(AutomataKeyGen).GetRuntimeMethod("GetKey", new[] { typeof(byte).MakePointerType().MakeByRefType(), typeof(int).MakeByRefType() });

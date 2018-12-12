@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace MessagePack.Internal
 {
-    public static partial class UnsafeMemory32
+    internal static partial class UnsafeMemory32
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static unsafe int WriteRaw4(ref byte[] dst, int dstOffset, byte[] src)
@@ -505,7 +505,7 @@ namespace MessagePack.Internal
 
     }
 
-    public static partial class UnsafeMemory64
+    internal static partial class UnsafeMemory64
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static unsafe int WriteRaw8(ref byte[] dst, int dstOffset, byte[] src)
